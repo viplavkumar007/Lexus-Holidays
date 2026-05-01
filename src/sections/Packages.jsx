@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { holidayPackages, brand } from "../data/siteContent";
 import ScrollReveal, { StaggerContainer, staggerItem } from "../components/ScrollReveal";
-import { FiClock, FiMapPin, FiUsers, FiArrowRight } from "react-icons/fi";
+import { FiClock, FiMapPin, FiArrowRight } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 
 const categories = ["All", "Domestic", "International", "Pilgrimage"];
@@ -36,7 +36,6 @@ export default function Packages() {
   return (
     <section id="packages" className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-12">
             <span className="section-label">Holiday Packages</span>
@@ -47,12 +46,11 @@ export default function Packages() {
             </h2>
             <div className="gold-divider mx-auto" />
             <p className="text-navy-600 text-base max-w-xl mx-auto mt-4">
-              From serene backwaters to exotic island getaways — pick your perfect escape.
+              From 4 Dham Yatra and Manali tours to international holidays, pick a package or ask us to build one for you.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Filter tabs */}
         <ScrollReveal delay={0.1}>
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             {categories.map((cat) => (
@@ -71,7 +69,6 @@ export default function Packages() {
           </div>
         </ScrollReveal>
 
-        {/* Package cards */}
         <StaggerContainer staggerDelay={0.08} className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filtered.map((pkg) => (
             <motion.div
@@ -80,7 +77,6 @@ export default function Packages() {
               whileHover={{ y: -6 }}
               className="group bg-white border border-gray-100 overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300"
             >
-              {/* Image */}
               <div className="relative overflow-hidden h-48">
                 <img
                   src={pkg.image}
@@ -88,27 +84,22 @@ export default function Packages() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 to-transparent" />
 
-                {/* Badge */}
                 <span className={`absolute top-3 left-3 px-2.5 py-1 text-xs font-bold tracking-wide uppercase ${badgeColors[pkg.badge] || "bg-navy-700 text-white"}`}>
                   {pkg.badge}
                 </span>
 
-                {/* Category */}
                 <span className="absolute top-3 right-3 px-2.5 py-1 text-xs font-semibold bg-white/90 text-navy-700 tracking-wide">
                   {pkg.category}
                 </span>
 
-                {/* Destination overlay */}
                 <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-white">
                   <FiMapPin size={12} />
                   <span className="font-semibold text-sm">{pkg.destination}</span>
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-5">
                 <div className="flex items-center gap-1 mb-1">
                   {[...Array(5)].map((_, i) => (
@@ -123,7 +114,6 @@ export default function Packages() {
                   {pkg.description}
                 </p>
 
-                {/* Highlights */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {pkg.highlights.slice(0, 3).map((h) => (
                     <span key={h} className="px-2 py-0.5 bg-navy-50 text-navy-600 text-xs font-medium">
@@ -137,7 +127,6 @@ export default function Packages() {
                   )}
                 </div>
 
-                {/* Price + CTA */}
                 <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                   <div>
                     <p className="text-xs text-navy-400 mb-0.5">Starting from</p>
@@ -163,15 +152,16 @@ export default function Packages() {
           ))}
         </StaggerContainer>
 
-        {/* Bottom CTA */}
         <ScrollReveal delay={0.2}>
           <div className="text-center mt-12">
             <p className="text-navy-500 text-sm mb-4">
               Don't see your destination? We create fully custom packages.
             </p>
-            <a href="#contact"
+            <a
+              href="#contact"
               onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
-              className="btn-outline">
+              className="btn-outline"
+            >
               Request Custom Package
             </a>
           </div>

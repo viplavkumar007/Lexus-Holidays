@@ -8,7 +8,7 @@ const trustPoints = [
   "Ministry of Tourism Recognised",
   "12+ Years of Trusted Service",
   "Dedicated In-Destination Support",
-  "100% Transparent Pricing – No Hidden Costs",
+  "100% Transparent Pricing - No Hidden Costs",
   "EMI & Group Discounts Available",
 ];
 
@@ -24,10 +24,8 @@ export default function About() {
     <section id="about" className="py-20 lg:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* Left: Image collage */}
           <ScrollReveal direction="right">
             <div className="relative">
-              {/* Main image */}
               <div className="relative z-10 overflow-hidden shadow-navy">
                 <img
                   src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=800&q=80"
@@ -38,7 +36,6 @@ export default function About() {
                 <div className="absolute inset-0 bg-navy-900/20" />
               </div>
 
-              {/* Accent image */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -54,10 +51,8 @@ export default function About() {
                 />
               </motion.div>
 
-              {/* Gold accent bar */}
               <div className="absolute top-0 left-0 w-1 h-full bg-gold-gradient z-20" />
 
-              {/* Experience badge */}
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -73,25 +68,23 @@ export default function About() {
             </div>
           </ScrollReveal>
 
-          {/* Right: Content */}
           <ScrollReveal direction="left">
             <div>
               <span className="section-label">Our Story</span>
               <h2 className="section-heading mb-4">
-                Born in Jharkhand,
+                Born in Delhi,
                 <br />
                 <span className="text-gradient-gold">Built for the World</span>
               </h2>
               <div className="gold-divider mb-6" />
 
               <p className="text-navy-600 text-base leading-relaxed mb-4">
-                Lexus Holidays was founded in Ranchi with one simple belief — every person deserves to experience the world's wonders, and they deserve a travel partner who cares as much about their journey as they do.
+                Lexus Holidays was founded in Delhi with one simple belief - every person deserves to experience the world's wonders, and they deserve a travel partner who cares as much about their journey as they do.
               </p>
               <p className="text-navy-600 text-base leading-relaxed mb-8">
-                Over 12 years, we've grown from a small travel desk to Jharkhand's most trusted holiday company — crafting over 5,000 journeys across 200+ destinations, from Kedarnath to Koh Samui.
+                Over 12 years, we've grown from a small travel desk to Delhi's trusted holiday company - crafting over 5,000 journeys across 200+ destinations, from Kedarnath to Koh Samui.
               </p>
 
-              {/* Trust checklist */}
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
                 {trustPoints.map((point) => (
                   <div key={point} className="flex items-start gap-3">
@@ -103,16 +96,17 @@ export default function About() {
                 ))}
               </div>
 
-              <a href="#contact"
+              <a
+                href="#contact"
                 onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
-                className="btn-primary">
+                className="btn-primary"
+              >
                 Plan Your Journey
               </a>
             </div>
           </ScrollReveal>
         </div>
 
-        {/* Milestones */}
         <ScrollReveal delay={0.15}>
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-100">
             {milestones.map((m) => (

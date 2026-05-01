@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { brand, navLinks } from "../data/siteContent";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-transparent.png";
 import { FiPhone, FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
@@ -47,14 +47,18 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
             <a
               href="#hero"
               onClick={(e) => { e.preventDefault(); handleNav("#hero"); }}
-              className="flex items-center gap-3 focus:outline-none"
+              className={`flex items-center gap-3 focus:outline-none px-3 py-2 transition-all duration-300 ${
+                scrolled
+                  ? "bg-transparent"
+                  : "bg-white/10 border border-white/25 backdrop-blur-sm"
+              }`}
             >
-              <img src={logo} alt="Lexus Holidays" className="h-10 md:h-12 w-auto" />
+              <img src={logo} alt="Lexus Holidays" className="h-14 md:h-16 w-auto" />
               <div className={`hidden sm:block transition-colors duration-300 ${scrolled ? "text-navy-900" : "text-white"}`}>
                 <div className="font-display font-bold text-lg leading-none tracking-wide">
                   LEXUS

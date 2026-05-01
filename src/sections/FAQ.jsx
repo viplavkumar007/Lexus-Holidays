@@ -27,7 +27,7 @@ export default function FAQ() {
                 <p className="font-semibold text-navy-900 text-sm mb-1">Still have questions?</p>
                 <p className="text-navy-500 text-sm mb-4">Our travel experts are available Mon–Sat, 9:30 AM – 7 PM.</p>
                 <a
-                  href="https://wa.me/919431600000?text=Hi!%20I%20have%20a%20question%20about%20booking%20a%20holiday."
+                  href="https://wa.me/919217512040?text=Hi!%20I%20have%20a%20question%20about%20booking%20a%20holiday."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-gold-600 hover:text-gold-700 transition-colors"

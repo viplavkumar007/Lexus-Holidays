@@ -8,7 +8,6 @@ export default function Services() {
   return (
     <section id="services" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="grid lg:grid-cols-2 gap-10 items-end mb-14">
           <ScrollReveal>
             <div>
@@ -23,20 +22,18 @@ export default function Services() {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="text-navy-600 text-base leading-relaxed lg:text-right">
-              From the moment you dream about a destination to the moment you return home — 
-              we handle every detail so you can focus on creating memories.
+              We handle domestic and international hotel bookings, flights, visa support,
+              tour packages, and one-place-to-another taxi services so your trip is managed in one place.
             </p>
           </ScrollReveal>
         </div>
 
-        {/* Services grid */}
         <StaggerContainer staggerDelay={0.08} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
         </StaggerContainer>
 
-        {/* Bottom stats */}
         <ScrollReveal delay={0.2}>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-100">
             {[

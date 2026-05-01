@@ -45,7 +45,7 @@ export default function Hero() {
       <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gold-gradient hidden lg:block" />
 
       {/* Main content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pb-20 w-full">
         <div className="max-w-3xl">
           <motion.div variants={stagger} initial="hidden" animate="visible">
             {/* Badge */}
@@ -102,7 +102,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.7 }}
-          className="absolute bottom-8 left-4 right-4 sm:left-6 sm:right-6 lg:left-8 lg:right-8"
+          className="mt-12 md:mt-16 max-w-4xl"
         >
           <div className="max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 backdrop-blur-sm border border-white/10">
             {hero.stats.map((stat) => (

@@ -35,7 +35,7 @@ export default function CTAStrip() {
             <span className="text-gradient-gold">One Call Away</span>
           </h2>
           <p className="text-navy-200 text-base md:text-lg mb-8 max-w-xl mx-auto">
-            Talk to our travel expert today. Free consultation, instant quotes, and exclusive deals for Jharkhand travellers.
+            Talk to our travel expert today. Free consultation, instant quotes, and exclusive deals for Delhi travellers.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
