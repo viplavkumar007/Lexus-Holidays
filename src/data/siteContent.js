@@ -169,7 +169,7 @@ export const holidayPackages = [
   },
   {
     id: "pkg-50",
-    category: "International",
+    category: "Domestic",
     badge: "Adventure",
     destination: "Nepal",
     duration: "5 Nights / 6 Days",
