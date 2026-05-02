@@ -28,7 +28,7 @@ export default function Packages() {
 
   const handleEnquire = (pkg) => {
     const msg = encodeURIComponent(
-      `Hi! I'm interested in the *${pkg.destination}* package (${pkg.duration}) starting at ${pkg.startingPrice}/person. Please share more details.`
+      `Hi! I'm interested in the *${pkg.destination}* package (${pkg.duration}). Please share more details.`
     );
     window.open(`https://wa.me/${brand.whatsapp}?text=${msg}`, "_blank");
   };
@@ -127,21 +127,12 @@ export default function Packages() {
                   )}
                 </div>
 
-                <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                  <div>
-                    <p className="text-xs text-navy-400 mb-0.5">Starting from</p>
-                    <p className="font-display font-bold text-lg text-navy-900">
-                      {pkg.startingPrice}
-                    </p>
-                    {pkg.perPerson && (
-                      <p className="text-xs text-navy-400">per person</p>
-                    )}
-                  </div>
+                <div className="pt-3 border-t border-gray-100">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() => handleEnquire(pkg)}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-navy-900 text-white text-xs font-bold tracking-wide uppercase hover:bg-gold-500 hover:text-navy-900 transition-colors duration-200"
+                    className="flex w-full items-center justify-center gap-1.5 px-4 py-2 bg-navy-900 text-white text-xs font-bold tracking-wide uppercase hover:bg-gold-500 hover:text-navy-900 transition-colors duration-200"
                   >
                     Enquire
                     <FiArrowRight size={12} />

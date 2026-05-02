@@ -192,7 +192,7 @@ export default function ContactForm({ showToast }) {
         </div>
         <div>
           <label htmlFor="budget" className="block text-xs font-semibold text-navy-700 mb-1.5 tracking-wide uppercase">
-            Budget (per person)
+            Budget Range
           </label>
           <select
             id="budget" name="budget"
