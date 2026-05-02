@@ -113,7 +113,7 @@ export const holidayPackages = [
     badge: "Spiritual",
     destination: "Rameswaram",
     duration: "3 Nights / 4 Days",
-    image: "https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=600&q=80",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ramanathaswamy%20Temple%2C%20Rameswaram.jpg",
     highlights: ["Ramanathaswamy Temple", "22 Holy Wells", "Dhanushkodi", "Agni Theertham"],
     description: "Visit one of the 12 Jyotirlinga shrines on the sacred Rameswaram island — a deeply spiritual South Indian pilgrimage.",
   },
